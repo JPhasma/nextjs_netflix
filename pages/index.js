@@ -22,7 +22,13 @@ export default function Home() {
         imgUrl='https://pxlbbq.com/wp-content/uploads/2019/02/Dune-Image-du-film.jpg'
         year='1984'
       />
-      <SectionCards />
+      <div className={styles.sectionWrapper}>
+        <SectionCards title='Disney' size='large' />
+        <SectionCards title='Watch it again' size='small' />
+        <SectionCards title='Travel' size='small' />
+        <SectionCards title='Productivity' size='medium' />
+        <SectionCards title='Popular' size='small' />
+      </div>
       <Card />
       <Card />
       <Card />
