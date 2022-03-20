@@ -3,6 +3,7 @@ import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 import NavBar from '../components/nav/navbar';
 import Banner from '../components/banner/banner';
+import Card from '../components/card/card';
 
 export default function Home() {
   return (
@@ -20,7 +21,7 @@ export default function Home() {
         imgUrl='https://pxlbbq.com/wp-content/uploads/2019/02/Dune-Image-du-film.jpg'
         year='1984'
       />
-      {/* <Card /> */}
+      <Card />
     </div>
   );
 }
