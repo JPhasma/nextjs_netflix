@@ -8,8 +8,13 @@ import SectionCards from '../components/card/section-cards';
 
 import { getVideos } from '../lib/videos';
 
-export default function Home() {
+// implement Server Side NextJS Rendering
+export async function getServerSideProps() {
   const videos = getVideos();
+  return { props: { videos } };
+}
+
+export default function Home({ videos }) {
   return (
     <div className={styles.container}>
       <Head>
