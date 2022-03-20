@@ -13,7 +13,7 @@ export default function Home() {
         rel='icon' href='/favicon.ico' />
       </Head>
 
-      <NavBar username='jane@doe.com' />
+      <NavBar />
       <Banner
         title='Dune'
         subTitle='very sandy and spicy'

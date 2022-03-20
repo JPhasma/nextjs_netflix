@@ -9,7 +9,7 @@ import Image from 'next/image';
 
 const NavBar = () => {
   const [showDropdown, setShowDropdown] = useState(false);
-  const [username, setUsername] = useState('');
+  const [username, setUsername] = useState('jane@doe.com');
   const [didToken, setDidToken] = useState('');
   const router = useRouter();
 
