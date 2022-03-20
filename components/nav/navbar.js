@@ -13,18 +13,18 @@ const NavBar = () => {
   const [didToken, setDidToken] = useState('');
   const router = useRouter();
 
-  useEffect(async () => {
-    try {
-      const { email, issuer } = await magic.user.getMetadata();
-      const didToken = await magic.user.getIdToken();
-      if (email) {
-        setUsername(email);
-        setDidToken(didToken);
-      }
-    } catch (error) {
-      console.error('Error retrieving email', error);
-    }
-  }, []);
+  // useEffect(async () => {
+  //   try {
+  //     const { email, issuer } = await magic.user.getMetadata();
+  //     const didToken = await magic.user.getIdToken();
+  //     if (email) {
+  //       setUsername(email);
+  //       setDidToken(didToken);
+  //     }
+  //   } catch (error) {
+  //     console.error('Error retrieving email', error);
+  //   }
+  // }, []);
 
   const handleOnClickHome = (e) => {
     e.preventDefault();
