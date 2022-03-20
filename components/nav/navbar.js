@@ -3,7 +3,10 @@ const NavBar = (props) => {
   const { username } = props;
   return (
     <div>
-      NavBar
+      <h1>
+        <a href='/'>Nextflix</a>
+      </h1>
+
       <p>{username}</p>
     </div>
   );
