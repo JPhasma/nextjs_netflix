@@ -1,12 +1,4 @@
 {
-  "kind": "youtube#searchListResponse",
-  "etag": "AL_wHPtZaczf5uUfsuRVHZUkdiA",
-  "nextPageToken": "CBkQAA",
-  "regionCode": "GB",
-  "pageInfo": {
-    "totalResults": 1000000,
-    "resultsPerPage": 25
-  },
   "items": [
     {
       "kind": "youtube#searchResult",
