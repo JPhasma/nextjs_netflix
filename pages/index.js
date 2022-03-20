@@ -6,7 +6,10 @@ import Banner from '../components/banner/banner';
 import Card from '../components/card/card';
 import SectionCards from '../components/card/section-cards';
 
+import { getVideos } from '../lib/videos';
+
 export default function Home() {
+  const videos = getVideos();
   return (
     <div className={styles.container}>
       <Head>
@@ -23,15 +26,12 @@ export default function Home() {
         year='1984'
       />
       <div className={styles.sectionWrapper}>
-        <SectionCards title='Disney' size='large' />
-        <SectionCards title='Watch it again' size='small' />
-        <SectionCards title='Travel' size='small' />
-        <SectionCards title='Productivity' size='medium' />
-        <SectionCards title='Popular' size='small' />
+        <SectionCards title='Disney' videos={videos} size='large' />
+        <SectionCards title='Watch it again' videos={videos} size='small' />
+        <SectionCards title='Travel' videos={videos} size='small' />
+        <SectionCards title='Productivity' videos={videos} size='medium' />
+        <SectionCards title='Popular' videos={videos} size='small' />
       </div>
-      <Card />
-      <Card />
-      <Card />
     </div>
   );
 }
