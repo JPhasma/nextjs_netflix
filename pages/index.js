@@ -22,6 +22,8 @@ export default function Home() {
         year='1984'
       />
       <Card />
+      <Card />
+      <Card />
     </div>
   );
 }
