@@ -2,6 +2,8 @@ import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 
+import Banner from '../components/banner';
+
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -11,6 +13,15 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <h1>Nextflix</h1>
+
+      {/* <NavBar /> */}
+      <Banner
+        title='Dune'
+        subTitle='very sandy and spicy'
+        imgUrl='https://pxlbbq.com/wp-content/uploads/2019/02/Dune-Image-du-film.jpg'
+        year='1984'
+      />
+      {/* <Card /> */}
     </div>
   );
 }
