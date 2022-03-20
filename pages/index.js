@@ -4,6 +4,7 @@ import styles from '../styles/Home.module.css';
 import NavBar from '../components/nav/navbar';
 import Banner from '../components/banner/banner';
 import Card from '../components/card/card';
+import SectionCards from '../components/card/section-cards';
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
         imgUrl='https://pxlbbq.com/wp-content/uploads/2019/02/Dune-Image-du-film.jpg'
         year='1984'
       />
+      <SectionCards />
       <Card />
       <Card />
       <Card />
