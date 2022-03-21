@@ -10,7 +10,7 @@ import { getVideos } from '../lib/videos';
 
 // implement Server Side NextJS Rendering
 export async function getServerSideProps() {
-  const videos = getVideos();
+  const videos = await getVideos();
   return { props: { videos } };
 }
 
