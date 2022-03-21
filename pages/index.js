@@ -10,11 +10,29 @@ import { getVideos } from '../lib/videos';
 
 // implement Server Side NextJS Rendering
 export async function getServerSideProps() {
-  const videos = await getVideos();
-  return { props: { videos } };
+  const cyclingVideos = await getVideos('cycling');
+  const travelVideos = await getVideos('travel');
+  const productivityVideos = await getVideos('Productivity');
+  const starWarsVideos = await getVideos('star wars trailer');
+  const disneyVideos = await getVideos('disney trailer');
+  return {
+    props: {
+      cyclingVideos,
+      disneyVideos,
+      starWarsVideos,
+      travelVideos,
+      productivityVideos,
+    },
+  };
 }
 
-export default function Home({ videos }) {
+export default function Home({
+  cyclingVideos,
+  starWarsVideos,
+  travelVideos,
+  productivityVideos,
+  disneyVideos,
+}) {
   return (
     <div className={styles.container}>
       <Head>
@@ -31,11 +49,15 @@ export default function Home({ videos }) {
         year='1984'
       />
       <div className={styles.sectionWrapper}>
-        <SectionCards title='Disney' videos={videos} size='large' />
-        <SectionCards title='Watch it again' videos={videos} size='small' />
-        <SectionCards title='Travel' videos={videos} size='small' />
-        <SectionCards title='Productivity' videos={videos} size='medium' />
-        <SectionCards title='Popular' videos={videos} size='small' />
+        <SectionCards title='Cycling' videos={cyclingVideos} size='large' />
+        <SectionCards title='Travel' videos={travelVideos} size='small' />
+        <SectionCards
+          title='Productivity'
+          videos={productivityVideos}
+          size='medium'
+        />
+        <SectionCards title='Star Wars' videos={starWarsVideos} size='small' />
+        <SectionCards title='Disney' videos={disneyVideos} size='small' />
       </div>
     </div>
   );
